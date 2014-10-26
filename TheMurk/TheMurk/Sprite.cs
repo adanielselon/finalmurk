@@ -32,7 +32,7 @@ namespace TheMurk
             this.speed = speed;
         }
 
-        public virtual void Update(GameTime gameTime, Rectangle clientBounds, Vector2 mod, bool inRange)
+        public virtual void Update(GameTime gameTime, Rectangle clientBounds)
         {
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
             if (timeSinceLastFrame >= spriteSheet.currentSegment.millisecondsPerFrame)
@@ -66,7 +66,7 @@ namespace TheMurk
                 Color.White,
                 0,
                 Vector2.Zero,
-                1f,
+                spriteSheet.scale,
                 effects,
                 0);
         }
@@ -81,10 +81,10 @@ namespace TheMurk
             get
             {
                 return new Rectangle(
-                    (int)position.X + collisionOffset.east,
-                    (int)position.Y + collisionOffset.north,
-                    spriteSheet.currentSegment.frameSize.X - (collisionOffset.east),
-                    spriteSheet.currentSegment.frameSize.Y - (collisionOffset.north));
+                    (int)position.X,
+                    (int)position.Y,
+                    (int)spriteSheet.scale * spriteSheet.currentSegment.frameSize.X,
+                    (int)spriteSheet.scale * spriteSheet.currentSegment.frameSize.Y);
             }
         }
     }

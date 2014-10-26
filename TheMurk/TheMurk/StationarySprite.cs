@@ -10,15 +10,10 @@ namespace TheMurk
 {
     class StationarySprite : Sprite
     {
-        protected Vector2 startingPosition;
-        protected Vector2 lastPosition;
-
 
         public StationarySprite(SpriteSheet spriteSheet, Vector2 position, CollisionOffset collisionOffset, Vector2 speed, GameState state)
             : base(spriteSheet, position, collisionOffset, speed, state)
         {
-            startingPosition = position;
-            lastPosition = position;
         }
 
         public override Vector2 direction
@@ -50,66 +45,18 @@ namespace TheMurk
             }
         }
 
-        public override void Update(GameTime gameTime, Rectangle clientBounds, Vector2 mod, bool isInRange)
+        public override void Update(GameTime gameTime, Rectangle clientBounds)
         {
-
-            if (state.isCollision() && isInRange)
-            {
-                if (state.getCollisionLeftRight() == true)
+             if (!state.getState(GameState.WEST) && !state.getState(GameState.EAST))
                 {
-                    position.X = lastPosition.X;
-                    if (!state.getState(GameState.NORTH) && !state.getState(GameState.SOUTH))
-                    {
-                        position.Y += direction.Y;
-                    }
-                    
-                }
-                if (state.getCollisionTopBottom() == true)
-                {
-                    position.Y = lastPosition.Y;
-                    if (!state.getState(GameState.WEST) && !state.getState(GameState.EAST))
-                    {
-                        position.X += direction.X;
-                    }
-                    
-                }
-            }
-            else
-            {
-                lastPosition = position;
-
-                if (position.X > startingPosition.X + ((SpriteManager.frameSize.X - (clientBounds.Width / 2 - SpriteManager.frameSize.X / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.X)))
-                {
-                    position.X = startingPosition.X + ((SpriteManager.frameSize.X - (clientBounds.Width / 2 - SpriteManager.frameSize.X / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.X));
-                    state.setState(GameState.WEST, true);
-                }
-                if (position.X < startingPosition.X - ((SpriteManager.frameSize.X - (clientBounds.Width / 2 - SpriteManager.frameSize.X / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.X)))
-                {
-                    position.X = startingPosition.X - ((SpriteManager.frameSize.X - (clientBounds.Width / 2 - SpriteManager.frameSize.X / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.X));
-                    state.setState(GameState.EAST, true);
-                }
-                if (position.Y > startingPosition.Y + ((SpriteManager.frameSize.Y - (clientBounds.Height / 2 - SpriteManager.frameSize.Y / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.Y)))
-                {
-                    position.Y = startingPosition.Y + ((SpriteManager.frameSize.Y - (clientBounds.Height / 2 - SpriteManager.frameSize.Y / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.Y));
-                    state.setState(GameState.NORTH, true);
-                }
-                if (position.Y < startingPosition.Y - ((SpriteManager.frameSize.Y - (clientBounds.Height / 2 - SpriteManager.frameSize.Y / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.Y)))
-                {
-                    position.Y = startingPosition.Y - ((SpriteManager.frameSize.Y - (clientBounds.Height / 2 - SpriteManager.frameSize.Y / 2)) + (((SpriteManager.mapSize / 2) - 1) * SpriteManager.frameSize.Y));
-                    state.setState(GameState.SOUTH, true);
-                }
-
-                if (!state.getState(GameState.WEST) && !state.getState(GameState.EAST))
-                {
-                    position.X += direction.X * mod.X;
+                    position.X += direction.X;
                 }
 
                 if (!state.getState(GameState.NORTH) && !state.getState(GameState.SOUTH))
                 {
-                    position.Y += direction.Y * mod.Y;
+                    position.Y += direction.Y;
                 }
-            }
-            base.Update(gameTime, clientBounds, mod, isInRange);
+            
         }
     }
 }

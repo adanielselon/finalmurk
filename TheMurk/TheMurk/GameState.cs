@@ -14,11 +14,8 @@ namespace TheMurk
         public static readonly int SOUTH = 4;
 
         private bool isEast, isWest, isNorth, isSouth;
-        private bool collision;
-
-        private bool collisionLeftRight;
-        private bool collisionTopBottom;
-
+        private int gameTime;
+        private int losingTime;
 
         public GameState()
         {
@@ -26,52 +23,6 @@ namespace TheMurk
             isWest = false;
             isNorth = false;
             isSouth = false;
-            collision = false;
-            collisionLeftRight = false;
-            collisionTopBottom = false;
-        }
-
-        public void collisionOccured(Sprite player, Sprite sprite)
-        {
-
-            if (player.position.X + player.spriteSheet.currentSegment.frameSize.X == sprite.position.X + 1 || player.position.X == sprite.position.X + sprite.spriteSheet.currentSegment.frameSize.X - 1)
-            {
-                collisionLeftRight = true;
-            }
-            if (player.position.Y + player.spriteSheet.currentSegment.frameSize.Y == sprite.position.Y + 1 || player.position.Y == sprite.position.Y + sprite.spriteSheet.currentSegment.frameSize.Y - 1)
-            {
-                collisionTopBottom = true;
-            }
-        }
-
-        public bool getCollisionTopBottom()
-        {
-            return collisionTopBottom;
-        }
-
-        public bool getCollisionLeftRight()
-        {
-            return collisionLeftRight;
-        }
-
-        public void setCollisionLeftRight(bool set)
-        {
-            collisionLeftRight = set;
-        }
-
-        public void setCollisionTopBottom(bool set)
-        {
-            collisionTopBottom = set;
-        }
-
-        public bool isCollision()
-        {
-            return collision;
-        }
-
-        public void setCollision(bool collision)
-        {
-            this.collision = collision;
         }
 
         public bool getState(int direction)
@@ -112,6 +63,26 @@ namespace TheMurk
             {
                 isSouth = set;
             }
+        }
+
+        public void setGameTime(int gameTime)
+        {
+            this.gameTime = gameTime;
+        }
+
+        public int getGameTime()
+        {
+            return gameTime;
+        }
+
+        public void setLosingTime(int losingTime)
+        {
+            this.losingTime = losingTime;
+        }
+
+        public int getLosingTime()
+        {
+            return losingTime;
         }
     }
 }

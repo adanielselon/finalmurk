@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background.xnb</Output>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background.xnb</Output>
       <Time>2014-10-21T19:49:18.7086311-04:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurk\bin\x86\Debug\Content\Images\stump.xnb</Output>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\stump.xnb</Output>
       <Time>2014-10-21T21:28:35.7325226-04:00</Time>
     </Item>
     <Item>
@@ -25,8 +25,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurk\bin\x86\Debug\Content\Images\character.xnb</Output>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\character.xnb</Output>
       <Time>2014-10-21T23:12:15.8460996-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\background_2048.png</Source>
+      <Name>Images\background_2048</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background_2048.xnb</Output>
+      <Time>2014-10-23T20:30:32.1639708-04:00</Time>
     </Item>
     <Item>
       <Source>courier.spritefont</Source>
@@ -34,8 +43,35 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurk\bin\x86\Debug\Content\courier.xnb</Output>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\courier.xnb</Output>
       <Time>2014-10-23T01:10:13.8080001-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\PersonSpriteSheet.png</Source>
+      <Name>Images\PersonSpriteSheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\PersonSpriteSheet.xnb</Output>
+      <Time>2014-10-26T16:23:35.1262023-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\overlay.png</Source>
+      <Name>Images\overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\overlay.xnb</Output>
+      <Time>2014-10-26T16:56:01.7703654-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\truestump.png</Source>
+      <Name>Images\truestump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\truestump.xnb</Output>
+      <Time>2014-10-26T17:45:54.6655111-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -43,10 +79,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurkContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurk\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurkContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurk\TheMurk\TheMurk\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurkContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurkContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

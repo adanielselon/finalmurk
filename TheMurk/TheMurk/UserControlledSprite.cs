@@ -46,121 +46,78 @@ namespace TheMurk
             }
         }
 
-        public override void Update(GameTime gameTime, Rectangle clientBounds, Vector2 mod, bool isInRange)
+        public void collision(Sprite sprite)
         {
-            // (state.getState(GameState.WEST) || state.getState(GameState.EAST) || state.getState(GameState.NORTH) || state.getState(GameState.SOUTH))
-            if (state.isCollision() && ((state.getCollisionLeftRight() && (state.getState(GameState.WEST) || state.getState(GameState.EAST))) || (state.getCollisionTopBottom() && (state.getState(GameState.NORTH) || state.getState(GameState.SOUTH)))))
+            if (position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) <= sprite.position.X + SpriteManager.speed.X && position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) > sprite.position.X)
             {
-                
-                if (state.getCollisionLeftRight() && (state.getState(GameState.WEST) || state.getState(GameState.EAST)))
-                {
-                    position.X = lastPosition.X;
-                    if (state.getState(GameState.NORTH))
-                    {
-                        position.Y += direction.Y * mod.Y;
-                        if (position.Y < 0)
-                        {
-                            position.Y = 0;
-                        }
-                        if (position.Y >= clientBounds.Height / 2 - SpriteManager.playerSize.Y / 2)
-                        {
-                            state.setState(GameState.NORTH, false);
-                        }
-                    }
-                    if (state.getState(GameState.SOUTH))
-                    {
-                        position.Y += direction.Y * mod.Y;
-                        if (position.Y > clientBounds.Height - SpriteManager.playerSize.Y)
-                        {
-                            position.Y = clientBounds.Height - SpriteManager.playerSize.Y;
-                        }
-                        if (position.Y <= clientBounds.Height / 2 - SpriteManager.playerSize.Y / 2)
-                        {
-                            state.setState(GameState.SOUTH, false);
-                        }
-                    }
-                }
-                if (state.getCollisionTopBottom() && (state.getState(GameState.NORTH) || state.getState(GameState.SOUTH)))
-                {
-                    position.Y = lastPosition.Y;
-                    if (state.getState(GameState.WEST))
-                    {
-                        position.X += direction.X * mod.X;
-                        if (position.X < 0)
-                        {
-                            position.X = 0;
-                        }
-                        if (position.X >= clientBounds.Width / 2 - SpriteManager.playerSize.X / 2)
-                        {
-                            state.setState(GameState.WEST, false);
-                        }
-                    }
-                    if (state.getState(GameState.EAST))
-                    {
-                        position.X += direction.X * mod.X;
-                        if (position.X > clientBounds.Width - SpriteManager.playerSize.X)
-                        {
-                            position.X = clientBounds.Width - SpriteManager.playerSize.X;
-                        }
-                        if (position.X <= clientBounds.Width / 2 - SpriteManager.playerSize.X / 2)
-                        {
-                            state.setState(GameState.EAST, false);
-                        }
-                    }
-                }
+                position.X = sprite.position.X - spriteSheet.currentSegment.frameSize.X * spriteSheet.scale;
             }
-            else
+            if (position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) <= sprite.position.Y + SpriteManager.speed.Y && position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) > sprite.position.Y)
             {
+                position.Y = sprite.position.Y - spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale;
+            }
+            if (position.X < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) && position.X >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale )- SpriteManager.speed.X)
+            {
+                position.X = sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale);
+            }
+            if (position.Y < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) && position.Y >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - SpriteManager.speed.Y)
+            {
+                position.Y = sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale);
+            }
+        }
+
+        public override void Update(GameTime gameTime, Rectangle clientBounds)
+        {
+            
                 lastPosition = position;
                 if (state.getState(GameState.WEST))
                 {
-                    position.X += direction.X * mod.X;
+                    position.X += direction.X;
                     if (position.X < 0)
                     {
                         position.X = 0;
                     }
-                    if (position.X >= clientBounds.Width / 2 - SpriteManager.playerSize.X / 2)
+                    if (position.X >= clientBounds.Width / 2 - (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) / 2)
                     {
                         state.setState(GameState.WEST, false);
                     }
                 }
                 if (state.getState(GameState.EAST))
                 {
-                    position.X += direction.X * mod.X;
-                    if (position.X > clientBounds.Width - SpriteManager.playerSize.X)
+                    position.X += direction.X;
+                    if (position.X > clientBounds.Width - (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale))
                     {
-                        position.X = clientBounds.Width - SpriteManager.playerSize.X;
+                        position.X = clientBounds.Width - (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale);
                     }
-                    if (position.X <= clientBounds.Width / 2 - SpriteManager.playerSize.X / 2)
+                    if (position.X <= clientBounds.Width / 2 - (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) / 2)
                     {
                         state.setState(GameState.EAST, false);
                     }
                 }
                 if (state.getState(GameState.NORTH))
                 {
-                    position.Y += direction.Y * mod.Y;
+                    position.Y += direction.Y;
                     if (position.Y < 0)
                     {
                         position.Y = 0;
                     }
-                    if (position.Y >= clientBounds.Height / 2 - SpriteManager.playerSize.Y / 2)
+                    if (position.Y >= clientBounds.Height / 2 - (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) / 2)
                     {
                         state.setState(GameState.NORTH, false);
                     }
                 }
                 if (state.getState(GameState.SOUTH))
                 {
-                    position.Y += direction.Y * mod.Y;
-                    if (position.Y > clientBounds.Height - SpriteManager.playerSize.Y)
+                    position.Y += direction.Y;
+                    if (position.Y > clientBounds.Height - (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale))
                     {
-                        position.Y = clientBounds.Height - SpriteManager.playerSize.Y;
+                        position.Y = clientBounds.Height - (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale);
                     }
-                    if (position.Y <= clientBounds.Height / 2 - SpriteManager.playerSize.Y / 2)
+                    if (position.Y <= clientBounds.Height / 2 - (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) / 2)
                     {
                         state.setState(GameState.SOUTH, false);
                     }
                 }
-            }
 
             //position += direction;
 
@@ -176,7 +133,7 @@ namespace TheMurk
             if (position.Y > clientBounds.Height - spriteSheet.currentSegment.frameSize.Y)
                 position.Y = clientBounds.Height - spriteSheet.currentSegment.frameSize.Y;
             */
-            base.Update(gameTime, clientBounds, mod, isInRange);
+            base.Update(gameTime, clientBounds);
         }
     }
 }

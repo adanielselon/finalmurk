@@ -114,6 +114,7 @@
     <Compile Include="CollisionOffset.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="LostPlayer.cs" />
+    <Compile Include="Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
@@ -121,9 +122,11 @@
     <Compile Include="SpriteManager.cs" />
     <Compile Include="SpriteSheet.cs" />
     <Compile Include="SpriteSheetSegment.cs" />
+    <Compile Include="MapBoundSprite.cs" />
     <Compile Include="StationarySprite.cs" />
     <Compile Include="StumpSprite.cs" />
     <Compile Include="UserControlledSprite.cs" />
+    <Compile Include="ZombieSprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

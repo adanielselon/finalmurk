@@ -11,14 +11,16 @@ namespace TheMurk
     {
         public Texture2D texture;
         public Point sheetSize;
-        public SpriteSheetSegment[] segments = new SpriteSheetSegment[4];
+        public float scale;
+        public SpriteSheetSegment[] segments = new SpriteSheetSegment[8];
         public SpriteSheetSegment currentSegment;
         private int numSegments;
 
-        public SpriteSheet(Texture2D texture, Point sheetSize)
+        public SpriteSheet(Texture2D texture, Point sheetSize, float scale)
         {
             this.texture = texture;
             this.sheetSize = sheetSize;
+            this.scale = scale;
             numSegments = 0;
         }
 
