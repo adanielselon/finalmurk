@@ -8,3 +8,5 @@ Content\Images\overlay.xnb
 Content\Images\truestump.xnb
 Content\Images\ZombieSpriteSheet.xnb
 Content\Images\battery_game2.xnb
+Content\Images\battery.xnb
+Content\Images\gps_locator (1).xnb

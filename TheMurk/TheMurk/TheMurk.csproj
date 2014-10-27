@@ -112,8 +112,10 @@
   <ItemGroup>
     <Compile Include="BackgroundSprite.cs" />
     <Compile Include="BatteryOverlaySprite.cs" />
+    <Compile Include="BatterySprite.cs" />
     <Compile Include="CollisionOffset.cs" />
     <Compile Include="GameState.cs" />
+    <Compile Include="GpsSprite.cs" />
     <Compile Include="LostPlayer.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="OverlaySprite.cs" />

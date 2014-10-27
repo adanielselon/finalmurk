@@ -47,3 +47,5 @@ C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMur
 C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\truestump.xnb
 C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\ZombieSpriteSheet.xnb
 C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery_game2.xnb
+C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery.xnb
+C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\gps_locator (1).xnb

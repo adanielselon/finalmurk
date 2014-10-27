@@ -15,17 +15,19 @@ namespace TheMurk
     public class SpriteManager : Microsoft.Xna.Framework.DrawableGameComponent
     {
         //GAMEPLAY VARIABLES
-        private int stumpCount = 100;
+        private int stumpCount = 500;
         private int zombieCount = 10;
+        private int batteryCount = 5;
         public readonly static Point frameSize =  new Point(512, 512);
         public readonly static Point playerSize = new Point(40, 42);
-        public readonly static int mapSize = 2; //even numbers only
+        public readonly static int mapSize = 8; //even numbers only
         public readonly static Vector2 speed = new Vector2(4, 4);
 
         private int currentTime = 0;
 
         protected bool collision = false;
-        private int losingTime = 20000;
+        private int losingTime = 120000;
+        private int batteryBonus = 10000;
 
         GameState state;
         Game game;
@@ -35,7 +37,9 @@ namespace TheMurk
         List<MapBoundSprite> objects = new List<MapBoundSprite>();
         List<BackgroundSprite> backgrounds = new List<BackgroundSprite>();
         List<ZombieSprite> zombies = new List<ZombieSprite>();
+        List<BatterySprite> batteries = new List<BatterySprite>();
         LostPlayer player;
+        MapBoundSprite gps;
         OverlaySprite overlay;
         BatteryOverlaySprite batteryOverlay;
 
@@ -74,16 +78,25 @@ namespace TheMurk
             for (int i = 0; i < zombieCount; i++)
                 zombies.Add(new ZombieSprite(Game.Content.Load<Texture2D>(@"Images/ZombieSpriteSheet"), new Vector2(random.Next(Game.GraphicsDevice.Viewport.Width / 2 + (((frameSize.X * (mapSize / 2)) + (frameSize.X / 2)) * -1), Game.GraphicsDevice.Viewport.Width / 2 + (frameSize.X * (mapSize / 2)) + (frameSize.X / 2)), random.Next(Game.GraphicsDevice.Viewport.Height / 2 + (((frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2)) * -1), Game.GraphicsDevice.Viewport.Height / 2 + (frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2))), state));
 
+            for (int i = 0; i < batteryCount; i++)
+                batteries.Add(new BatterySprite(Game.Content.Load<Texture2D>(@"Images/battery"), new Vector2(random.Next(Game.GraphicsDevice.Viewport.Width / 2 + (((frameSize.X * (mapSize / 2)) + (frameSize.X / 2)) * -1), Game.GraphicsDevice.Viewport.Width / 2 + (frameSize.X * (mapSize / 2)) + (frameSize.X / 2)), random.Next(Game.GraphicsDevice.Viewport.Height / 2 + (((frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2)) * -1), Game.GraphicsDevice.Viewport.Height / 2 + (frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2))), state));
+
             foreach (ZombieSprite zombie in zombies)
                 map.add(zombie);
 
             foreach (BackgroundSprite back in backgrounds)
                 map.add(back);
 
+            foreach (BatterySprite battery in batteries)
+                map.add(battery);
+
             foreach (MapBoundSprite sprite in objects)
                 map.add(sprite);
 
+
             //add zombies
+            gps = new GpsSprite(Game.Content.Load<Texture2D>(@"Images/gps_locator (1)"), new Vector2(random.Next(Game.GraphicsDevice.Viewport.Width / 2 + (((frameSize.X * (mapSize / 2)) + (frameSize.X / 2)) * -1), Game.GraphicsDevice.Viewport.Width / 2 + (frameSize.X * (mapSize / 2)) + (frameSize.X / 2)), random.Next(Game.GraphicsDevice.Viewport.Height / 2 + (((frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2)) * -1), Game.GraphicsDevice.Viewport.Height / 2 + (frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2))), state);
+            map.add(gps);
             player = new LostPlayer(Game.Content.Load<Texture2D>(@"Images/PersonSpriteSheet"), new Vector2(Game.GraphicsDevice.Viewport.Width/2 - playerSize.X/2, Game.GraphicsDevice.Viewport.Height/2 - playerSize.Y/2), state);
             overlay = new OverlaySprite(Game.Content.Load<Texture2D>(@"Images/overlay"), new Vector2((Game.GraphicsDevice.Viewport.Width/2 - frameSize.X/2) + (0 * frameSize.X), (Game.GraphicsDevice.Viewport.Height / 2 - frameSize.Y/2) + (0 * frameSize.Y)), state);
             batteryOverlay = new BatteryOverlaySprite(Game.Content.Load<Texture2D>(@"Images/battery_game2"), new Vector2(Game.GraphicsDevice.Viewport.Width - 50, 20), state);
@@ -132,6 +145,21 @@ namespace TheMurk
                     game.Exit();
             }
 
+            foreach (BatterySprite battery in batteries)
+            {
+                if (battery.collisionRect.Intersects(player.collisionRect) && battery.isUsed == false)
+                {
+                    state.setLosingTime(state.getLosingTime() + batteryBonus);
+                    battery.isUsed = true;
+                }
+            }
+
+            if (gps.collisionRect.Intersects(player.collisionRect))
+            {
+                game.Exit();
+            }
+
+
             state.setGameTime(state.getGameTime() + gameTime.ElapsedGameTime.Milliseconds);
             if (state.getGameTime() >= state.getLosingTime())
                 game.Exit();
@@ -151,8 +179,14 @@ namespace TheMurk
                 sprite.Draw(gameTime, spriteBatch);
             foreach (Sprite sprite in zombies)
                 sprite.Draw(gameTime, spriteBatch);
+            foreach (BatterySprite battery in batteries)
+            {
+                if(battery.isUsed == false)
+                    battery.Draw(gameTime, spriteBatch);
+            }
+            gps.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
-            overlay.Draw(gameTime, spriteBatch);
+            //overlay.Draw(gameTime, spriteBatch);
             batteryOverlay.Draw(gameTime, spriteBatch);
             //overlay.Draw(gameTime, spriteBatch);
             spriteBatch.End();

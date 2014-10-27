@@ -42,56 +42,63 @@ namespace TheMurk
             {
                 if (player.position.X > position.X)
                 {
-                    position.X += 1f;           
+                    position.X += 1;           
                 }
                 else
                 {
-                    position.X -= 1f;
+                    position.X -= 1;
                 }
                 if (player.position.Y > position.Y)
                 {
-                    position.Y += 1f;
+                    position.Y += 1;
                 }
                 else
                 {
-                    position.Y -= 1f;
+                    position.Y -= 1;
                 }
             }
-            
-            if (previousPosition.X - position.X == 0 && previousPosition.Y - position.Y < 0)
-            {
-                spriteSheet.setCurrentSegment(4);
-                currentFrame = new Point(4, 0);
-            }
-            if (previousPosition.X - position.X > 0 && previousPosition.Y - position.Y < 0)
-            {
-                spriteSheet.setCurrentSegment(0);
-                currentFrame = new Point(0, 0);
-            }
-            if (previousPosition.X - position.X > 0 && previousPosition.Y - position.Y == 0)
-            {
-                spriteSheet.setCurrentSegment(2);
-            }
-            if (previousPosition.X - position.X > 0 && previousPosition.Y - position.Y > 0)
-            {
-                spriteSheet.setCurrentSegment(3);
-            }
-            if (previousPosition.X - position.X == 0 && previousPosition.Y - position.Y > 0)
+
+            Vector2 difference = new Vector2(previousPosition.X - position.X, previousPosition.Y - position.Y);
+
+
+            if (previousPosition.Y - position.Y < 0)
             {
                 spriteSheet.setCurrentSegment(4);
             }
-            if (previousPosition.X - position.X < 0 && previousPosition.Y - position.Y > 0)
+
+            if (previousPosition.X - position.X < 0)
             {
                 spriteSheet.setCurrentSegment(5);
             }
-            if (previousPosition.X - position.X < 0 && previousPosition.Y - position.Y == 0)
+
+            if (previousPosition.Y - position.Y < 0)
             {
                 spriteSheet.setCurrentSegment(6);
             }
-            if (previousPosition.X - position.X < 0 && previousPosition.Y - position.Y < 0)
+
+            if (previousPosition.X - position.X > 0)
             {
                 spriteSheet.setCurrentSegment(7);
             }
+            /*
+            if (previousPosition.X - position.X < 0.4 && previousPosition.Y - position.Y > 0.4)
+            {
+                spriteSheet.setCurrentSegment(0);
+            }
+            if (previousPosition.X - position.X < 0.4 && previousPosition.Y - position.Y < 0.4)
+            {
+                spriteSheet.setCurrentSegment(1);
+            }
+            if (previousPosition.X - position.X > 0.4 && previousPosition.Y - position.Y < 0.4)
+            {
+                spriteSheet.setCurrentSegment(2);
+            }
+            if (previousPosition.X - position.X > 0.4 && previousPosition.Y - position.Y > 0.4)
+            {
+                spriteSheet.setCurrentSegment(3);
+            }*/
+
+            currentFrame = spriteSheet.currentSegment.startFrame;
           
         }
 

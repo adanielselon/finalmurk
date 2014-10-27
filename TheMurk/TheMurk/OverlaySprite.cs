@@ -26,10 +26,29 @@ namespace TheMurk
 
          public override void Update(GameTime gameTime, Rectangle clientBounds)
          {
-             MouseState state = Mouse.GetState();
+
+             if (state.getGameTime() < state.getLosingTime())
+             {
+                 spriteSheet.scale = .25f;
+             }
+             if (state.getGameTime() < ((state.getLosingTime() / 4) * 3))
+             {
+                 spriteSheet.scale = .5f;
+             }
+             if (state.getGameTime() < ((state.getLosingTime() / 4) * 2))
+             {
+                 spriteSheet.scale = .75f;
+             }
+             if (state.getGameTime() < state.getLosingTime() / 4)
+             {
+                 spriteSheet.scale = 1f;
+             }
+             MouseState mouseState = Mouse.GetState();
              
-             position.X = state.X - 982;
-             position.Y = state.Y - 531;
+             position.X = mouseState.X - (982 * spriteSheet.scale);
+             position.Y = mouseState.Y - (531 * spriteSheet.scale);
+
+             
          }
 
          public override Vector2 direction

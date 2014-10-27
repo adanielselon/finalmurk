@@ -91,6 +91,24 @@
       <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery_game2.xnb</Output>
       <Time>2014-10-26T19:38:54.3570028-04:00</Time>
     </Item>
+    <Item>
+      <Source>Images\battery.png</Source>
+      <Name>Images\battery</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery.xnb</Output>
+      <Time>2014-10-26T20:32:02.6846251-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\gps_locator (1).png</Source>
+      <Name>Images\gps_locator (1)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\gps_locator (1).xnb</Output>
+      <Time>2014-10-26T20:54:57.3258548-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
