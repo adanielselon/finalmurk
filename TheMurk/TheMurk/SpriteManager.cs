@@ -36,7 +36,7 @@ namespace TheMurk
         List<BackgroundSprite> backgrounds = new List<BackgroundSprite>();
         List<ZombieSprite> zombies = new List<ZombieSprite>();
         LostPlayer player;
-        BackgroundSprite overlay;
+        OverlaySprite overlay;
         BatteryOverlaySprite batteryOverlay;
 
         Map map = new Map();
@@ -85,7 +85,7 @@ namespace TheMurk
 
             //add zombies
             player = new LostPlayer(Game.Content.Load<Texture2D>(@"Images/PersonSpriteSheet"), new Vector2(Game.GraphicsDevice.Viewport.Width/2 - playerSize.X/2, Game.GraphicsDevice.Viewport.Height/2 - playerSize.Y/2), state);
-            //overlay = new BackgroundSprite(Game.Content.Load<Texture2D>(@"Images/overlay"), new Vector2((Game.GraphicsDevice.Viewport.Width/2 - frameSize.X/2) + (0 * frameSize.X), (Game.GraphicsDevice.Viewport.Height / 2 - frameSize.Y/2) + (0 * frameSize.Y)), state);
+            overlay = new OverlaySprite(Game.Content.Load<Texture2D>(@"Images/overlay"), new Vector2((Game.GraphicsDevice.Viewport.Width/2 - frameSize.X/2) + (0 * frameSize.X), (Game.GraphicsDevice.Viewport.Height / 2 - frameSize.Y/2) + (0 * frameSize.Y)), state);
             batteryOverlay = new BatteryOverlaySprite(Game.Content.Load<Texture2D>(@"Images/battery_game2"), new Vector2(Game.GraphicsDevice.Viewport.Width - 50, 20), state);
 
             base.LoadContent();
@@ -137,6 +137,7 @@ namespace TheMurk
                 game.Exit();
 
             batteryOverlay.Update(gameTime, Game.Window.ClientBounds);
+            overlay.Update(gameTime, Game.Window.ClientBounds);
 
             base.Update(gameTime);
         }
@@ -151,6 +152,7 @@ namespace TheMurk
             foreach (Sprite sprite in zombies)
                 sprite.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
+            overlay.Draw(gameTime, spriteBatch);
             batteryOverlay.Draw(gameTime, spriteBatch);
             //overlay.Draw(gameTime, spriteBatch);
             spriteBatch.End();
