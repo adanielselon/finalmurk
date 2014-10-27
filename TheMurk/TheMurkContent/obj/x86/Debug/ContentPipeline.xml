@@ -73,6 +73,24 @@
       <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\truestump.xnb</Output>
       <Time>2014-10-26T17:45:54.6655111-04:00</Time>
     </Item>
+    <Item>
+      <Source>Images\ZombieSpriteSheet.png</Source>
+      <Name>Images\ZombieSpriteSheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\ZombieSpriteSheet.xnb</Output>
+      <Time>2014-10-26T18:31:51.8899937-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\battery_game2.png</Source>
+      <Name>Images\battery_game2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery_game2.xnb</Output>
+      <Time>2014-10-26T19:38:54.3570028-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

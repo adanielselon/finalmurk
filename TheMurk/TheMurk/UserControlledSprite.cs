@@ -48,19 +48,19 @@ namespace TheMurk
 
         public void collision(Sprite sprite)
         {
-            if (position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) <= sprite.position.X + SpriteManager.speed.X && position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) > sprite.position.X)
+            if (position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) <= sprite.position.X + (SpriteManager.speed.X + 4) && position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) > sprite.position.X)
             {
                 position.X = sprite.position.X - spriteSheet.currentSegment.frameSize.X * spriteSheet.scale;
             }
-            if (position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) <= sprite.position.Y + SpriteManager.speed.Y && position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) > sprite.position.Y)
+            if (position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) <= sprite.position.Y + (SpriteManager.speed.Y + 4) && position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) > sprite.position.Y)
             {
                 position.Y = sprite.position.Y - spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale;
             }
-            if (position.X < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) && position.X >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale )- SpriteManager.speed.X)
+            if (position.X < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) && position.X >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - (SpriteManager.speed.X + 4))
             {
                 position.X = sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale);
             }
-            if (position.Y < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) && position.Y >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - SpriteManager.speed.Y)
+            if (position.Y < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) && position.Y >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - (SpriteManager.speed.Y + 4))
             {
                 position.Y = sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale);
             }

@@ -83,8 +83,8 @@ namespace TheMurk
                 return new Rectangle(
                     (int)position.X,
                     (int)position.Y,
-                    (int)spriteSheet.scale * spriteSheet.currentSegment.frameSize.X,
-                    (int)spriteSheet.scale * spriteSheet.currentSegment.frameSize.Y);
+                    (int) (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale),
+                    (int) (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale));
             }
         }
     }

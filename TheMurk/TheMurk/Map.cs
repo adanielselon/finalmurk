@@ -30,8 +30,7 @@ namespace TheMurk
         public void collision(LostPlayer player, Sprite sprite)
         {
 
-            player.position = new Vector2(0, 0);
-            if (player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) <= sprite.position.X + SpriteManager.speed.X && player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) > sprite.position.X)
+            if (player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) <= sprite.position.X + (SpriteManager.speed.X + 4) && player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) > sprite.position.X)
             {
                 float difference = player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) - sprite.position.X;
                 foreach (Sprite spr in sprites)
@@ -39,7 +38,7 @@ namespace TheMurk
                     spr.position.X += difference;
                 }
             }
-            if (player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) <= sprite.position.Y + SpriteManager.speed.Y && player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) > sprite.position.Y)
+            if (player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) <= sprite.position.Y + (SpriteManager.speed.Y + 4) && player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) > sprite.position.Y)
             {
                 float difference = player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) - sprite.position.Y;       
                 foreach (Sprite spr in sprites)
@@ -47,7 +46,7 @@ namespace TheMurk
                     spr.position.Y += difference;
                 }
             }
-            if (player.position.X < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) && player.position.X >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - SpriteManager.speed.X)
+            if (player.position.X < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) && player.position.X >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - (SpriteManager.speed.X + 4))
             {
                 float difference = sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - player.position.X;
                 foreach (Sprite spr in sprites)
@@ -55,7 +54,7 @@ namespace TheMurk
                     spr.position.X -= difference;
                 }
             }
-            if (player.position.Y < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) && player.position.Y >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - SpriteManager.speed.Y)
+            if (player.position.Y < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) && player.position.Y >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - (SpriteManager.speed.Y + 4))
             {
                 float difference = sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - player.position.Y;
                 foreach (Sprite spr in sprites)

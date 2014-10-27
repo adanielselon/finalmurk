@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackgroundSprite.cs" />
+    <Compile Include="BatteryOverlaySprite.cs" />
     <Compile Include="CollisionOffset.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="LostPlayer.cs" />

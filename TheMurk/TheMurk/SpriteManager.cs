@@ -16,7 +16,7 @@ namespace TheMurk
     {
         //GAMEPLAY VARIABLES
         private int stumpCount = 100;
-        private int zombieCount = 0;
+        private int zombieCount = 10;
         public readonly static Point frameSize =  new Point(512, 512);
         public readonly static Point playerSize = new Point(40, 42);
         public readonly static int mapSize = 2; //even numbers only
@@ -37,6 +37,7 @@ namespace TheMurk
         List<ZombieSprite> zombies = new List<ZombieSprite>();
         LostPlayer player;
         BackgroundSprite overlay;
+        BatteryOverlaySprite batteryOverlay;
 
         Map map = new Map();
 
@@ -45,6 +46,7 @@ namespace TheMurk
         {
             this.game = game;
             state = new GameState();
+            state.setLosingTime(losingTime);
         }
 
         public override void Initialize()
@@ -70,7 +72,7 @@ namespace TheMurk
                 objects.Add(new StumpSprite(Game.Content.Load<Texture2D>(@"Images/truestump"), new Vector2(random.Next(Game.GraphicsDevice.Viewport.Width/2 + (((frameSize.X * (mapSize/2)) + (frameSize.X/2)) * -1), Game.GraphicsDevice.Viewport.Width/2 + (frameSize.X * (mapSize/2)) + (frameSize.X/2)), random.Next(Game.GraphicsDevice.Viewport.Height/2 + (((frameSize.Y * (mapSize/2)) + (frameSize.Y/2)) * -1), Game.GraphicsDevice.Viewport.Height/2 + (frameSize.Y * (mapSize/2)) + (frameSize.Y/2))), state));
             
             for (int i = 0; i < zombieCount; i++)
-                zombies.Add(new ZombieSprite(Game.Content.Load<Texture2D>(@"Images/character"), new Vector2(random.Next(Game.GraphicsDevice.Viewport.Width / 2 + (((frameSize.X * (mapSize / 2)) + (frameSize.X / 2)) * -1), Game.GraphicsDevice.Viewport.Width / 2 + (frameSize.X * (mapSize / 2)) + (frameSize.X / 2)), random.Next(Game.GraphicsDevice.Viewport.Height / 2 + (((frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2)) * -1), Game.GraphicsDevice.Viewport.Height / 2 + (frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2))), state));
+                zombies.Add(new ZombieSprite(Game.Content.Load<Texture2D>(@"Images/ZombieSpriteSheet"), new Vector2(random.Next(Game.GraphicsDevice.Viewport.Width / 2 + (((frameSize.X * (mapSize / 2)) + (frameSize.X / 2)) * -1), Game.GraphicsDevice.Viewport.Width / 2 + (frameSize.X * (mapSize / 2)) + (frameSize.X / 2)), random.Next(Game.GraphicsDevice.Viewport.Height / 2 + (((frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2)) * -1), Game.GraphicsDevice.Viewport.Height / 2 + (frameSize.Y * (mapSize / 2)) + (frameSize.Y / 2))), state));
 
             foreach (ZombieSprite zombie in zombies)
                 map.add(zombie);
@@ -84,7 +86,7 @@ namespace TheMurk
             //add zombies
             player = new LostPlayer(Game.Content.Load<Texture2D>(@"Images/PersonSpriteSheet"), new Vector2(Game.GraphicsDevice.Viewport.Width/2 - playerSize.X/2, Game.GraphicsDevice.Viewport.Height/2 - playerSize.Y/2), state);
             //overlay = new BackgroundSprite(Game.Content.Load<Texture2D>(@"Images/overlay"), new Vector2((Game.GraphicsDevice.Viewport.Width/2 - frameSize.X/2) + (0 * frameSize.X), (Game.GraphicsDevice.Viewport.Height / 2 - frameSize.Y/2) + (0 * frameSize.Y)), state);
-
+            batteryOverlay = new BatteryOverlaySprite(Game.Content.Load<Texture2D>(@"Images/battery_game2"), new Vector2(Game.GraphicsDevice.Viewport.Width - 50, 20), state);
 
             base.LoadContent();
         }
@@ -125,12 +127,16 @@ namespace TheMurk
             }
 
             foreach (ZombieSprite zombie in zombies)
+            {
                 if (zombie.collisionRect.Intersects(player.collisionRect))
                     game.Exit();
+            }
 
             state.setGameTime(state.getGameTime() + gameTime.ElapsedGameTime.Milliseconds);
-            if (state.getGameTime() >= losingTime)
+            if (state.getGameTime() >= state.getLosingTime())
                 game.Exit();
+
+            batteryOverlay.Update(gameTime, Game.Window.ClientBounds);
 
             base.Update(gameTime);
         }
@@ -145,6 +151,7 @@ namespace TheMurk
             foreach (Sprite sprite in zombies)
                 sprite.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
+            batteryOverlay.Draw(gameTime, spriteBatch);
             //overlay.Draw(gameTime, spriteBatch);
             spriteBatch.End();
 
