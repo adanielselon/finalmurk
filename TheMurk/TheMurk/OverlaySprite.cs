@@ -16,7 +16,7 @@ namespace TheMurk
             new CollisionOffset(0, 0, 0, 0), SpriteManager.speed, state)
         {
 
-            Point frameSize = new Point(2157, 1172);
+            Point frameSize = new Point(3072, 2340);
             
             spriteSheet.addSegment(frameSize, new Point(0, 0), new Point(0, 0), 50);
 
@@ -26,29 +26,12 @@ namespace TheMurk
 
          public override void Update(GameTime gameTime, Rectangle clientBounds)
          {
+             spriteSheet.scale = (float) (((1 - (float) state.getGameTime() / (float) state.getLosingTime()) * 2) + 0.7);
 
-             if (state.getGameTime() < state.getLosingTime())
-             {
-                 spriteSheet.scale = .25f;
-             }
-             if (state.getGameTime() < ((state.getLosingTime() / 4) * 3))
-             {
-                 spriteSheet.scale = .5f;
-             }
-             if (state.getGameTime() < ((state.getLosingTime() / 4) * 2))
-             {
-                 spriteSheet.scale = .75f;
-             }
-             if (state.getGameTime() < state.getLosingTime() / 4)
-             {
-                 spriteSheet.scale = 1f;
-             }
              MouseState mouseState = Mouse.GetState();
              
-             position.X = mouseState.X - (982 * spriteSheet.scale);
-             position.Y = mouseState.Y - (531 * spriteSheet.scale);
-
-             
+             position.X = mouseState.X - (1536 * spriteSheet.scale);
+             position.Y = mouseState.Y - (1170 * spriteSheet.scale);            
          }
 
          public override Vector2 direction

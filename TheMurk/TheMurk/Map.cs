@@ -8,13 +8,13 @@ namespace TheMurk
 {
     class Map
     {
-        public List<Sprite> sprites = new List<Sprite>();
+        public List<StationarySprite> sprites = new List<StationarySprite>();
 
         public Map()
         {
         }
 
-        public void add(Sprite sprite)
+        public void add(StationarySprite sprite)
         {
             sprites.Add(sprite);
         }
@@ -30,33 +30,34 @@ namespace TheMurk
         public void collision(LostPlayer player, Sprite sprite)
         {
 
-            if (player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) <= sprite.position.X + (SpriteManager.speed.X + 4) && player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) > sprite.position.X)
+            //player on the left
+            if (player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) - player.collisionOffset.east <= sprite.position.X + (SpriteManager.speed.X + 6) + sprite.collisionOffset.west && player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) - player.collisionOffset.east > sprite.position.X + sprite.collisionOffset.west)
             {
-                float difference = player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) - sprite.position.X;
+                float difference = (player.position.X + (player.spriteSheet.currentSegment.frameSize.X * player.spriteSheet.scale) - player.collisionOffset.east) - (sprite.position.X + sprite.collisionOffset.west);
                 foreach (Sprite spr in sprites)
                 {
                     spr.position.X += difference;
                 }
             }
-            if (player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) <= sprite.position.Y + (SpriteManager.speed.Y + 4) && player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) > sprite.position.Y)
+            else if (player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) - player.collisionOffset.south <= sprite.position.Y + (SpriteManager.speed.Y + 6) + sprite.collisionOffset.north && player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) - player.collisionOffset.south > sprite.position.Y + sprite.collisionOffset.north)
             {
-                float difference = player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) - sprite.position.Y;       
+                float difference = (player.position.Y + (player.spriteSheet.currentSegment.frameSize.Y * player.spriteSheet.scale) - player.collisionOffset.south) - (sprite.position.Y + sprite.collisionOffset.north);       
                 foreach (Sprite spr in sprites)
                 {
                     spr.position.Y += difference;
                 }
             }
-            if (player.position.X < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) && player.position.X >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - (SpriteManager.speed.X + 4))
+            else if (player.position.X + player.collisionOffset.west < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - sprite.collisionOffset.east && player.position.X + player.collisionOffset.west >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - (SpriteManager.speed.X + 6) - sprite.collisionOffset.east)
             {
-                float difference = sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - player.position.X;
+                float difference = (sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - sprite.collisionOffset.east) - (player.position.X + player.collisionOffset.west);
                 foreach (Sprite spr in sprites)
                 {
                     spr.position.X -= difference;
                 }
             }
-            if (player.position.Y < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) && player.position.Y >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - (SpriteManager.speed.Y + 4))
+            else if (player.position.Y + player.collisionOffset.north < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - sprite.collisionOffset.south && player.position.Y + player.collisionOffset.north >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - (SpriteManager.speed.Y + 6) - sprite.collisionOffset.south)
             {
-                float difference = sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - player.position.Y;
+                float difference = (sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - sprite.collisionOffset.south) - (player.position.Y + player.collisionOffset.north);
                 foreach (Sprite spr in sprites)
                 {
                     spr.position.Y -= difference;

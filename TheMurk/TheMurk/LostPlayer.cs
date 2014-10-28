@@ -13,7 +13,7 @@ namespace TheMurk
 
         public LostPlayer(Texture2D image, Vector2 position, GameState state)
              : base(new SpriteSheet(image, new  Point(0, 8), 0.15f), position,
-            new CollisionOffset(0, 0, 0, 0), SpriteManager.speed, state)
+            new CollisionOffset(20, 20, 20, 20), SpriteManager.speed, state)
         {
 
             Point frameSize = new Point(438, 444);
@@ -36,34 +36,42 @@ namespace TheMurk
             if (direction.X == 0 && direction.Y < 0)           
             {
                 spriteSheet.setCurrentSegment(0);
+                //collisionOffset = new CollisionOffset(20, 20, 0, 0);
             }
             if (direction.X > 0 && direction.Y < 0)
             {
                 spriteSheet.setCurrentSegment(1);
+                //collisionOffset = new CollisionOffset(20, 20, 20, 20);
             }
             if (direction.X > 0 && direction.Y == 0)
             {
                 spriteSheet.setCurrentSegment(2);
+                //collisionOffset = new CollisionOffset(0, 0, 20, 20);
             }
             if (direction.X > 0 && direction.Y > 0)
             {
                 spriteSheet.setCurrentSegment(3);
+                //collisionOffset = new CollisionOffset(20, 20, 20, 20);
             }
             if (direction.X == 0 && direction.Y > 0)
             {
                 spriteSheet.setCurrentSegment(4);
+                //collisionOffset = new CollisionOffset(20, 20, 0, 0);
             }
             if (direction.X < 0 && direction.Y > 0)
             {
                 spriteSheet.setCurrentSegment(5);
+                //collisionOffset = new CollisionOffset(20, 20, 20, 20);
             }
             if (direction.X < 0 && direction.Y == 0)
             {
                 spriteSheet.setCurrentSegment(6);
+                //collisionOffset = new CollisionOffset(0, 0, 20, 20);
             }
             if (direction.X < 0 && direction.Y < 0)
             {
                 spriteSheet.setCurrentSegment(7);
+                //collisionOffset = new CollisionOffset(20, 20, 20, 20);
             }
 
 

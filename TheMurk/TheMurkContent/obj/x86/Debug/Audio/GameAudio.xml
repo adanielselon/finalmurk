@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sections>
+  <WaveBank Name="Wave Bank">Wave Bank
+{
+    Name = Wave Bank;
+    Xbox File = Xbox\Wave Bank.xwb;
+    Windows File = Win\Wave Bank.xwb;
+    Xbox Bank Path Edited = 0;
+    Windows Bank Path Edited = 0;
+    Seek Tables = 1;
+    Compression Preset Name = &lt;none&gt;;
+    Bank Last Revised Low = 480036941;
+    Bank Last Revised High = 30405218;
+
+    Wave
+    {
+        Name = track1;
+        File = track1.wav;
+        Build Settings Last Modified Low = 688444557;
+        Build Settings Last Modified High = 30405211;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 11025;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 8026200;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3081595392;
+            Last Modified High = 30405198;
+        }
+    }
+
+    Wave
+    {
+        Name = track2;
+        File = track2.wav;
+        Build Settings Last Modified Low = 688444557;
+        Build Settings Last Modified High = 30405211;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 11025;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 7982100;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3101595392;
+            Last Modified High = 30405198;
+        }
+    }
+
+    Wave
+    {
+        Name = track3;
+        File = track3.wav;
+        Build Settings Last Modified Low = 688444557;
+        Build Settings Last Modified High = 30405211;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 11025;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 8070300;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3101595392;
+            Last Modified High = 30405198;
+        }
+    }
+
+    Wave
+    {
+        Name = track4;
+        File = track4.wav;
+        Build Settings Last Modified Low = 688544557;
+        Build Settings Last Modified High = 30405211;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 11025;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 7849800;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3101595392;
+            Last Modified High = 30405198;
+        }
+    }
+
+    Wave
+    {
+        Name = track5;
+        File = track5.wav;
+        Build Settings Last Modified Low = 688544557;
+        Build Settings Last Modified High = 30405211;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 11025;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 7762608;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3121595392;
+            Last Modified High = 30405198;
+        }
+    }
+
+    Wave
+    {
+        Name = battery_nearby;
+        File = battery_nearby.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 190160;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3556431872;
+            Last Modified High = 30405193;
+        }
+    }
+
+    Wave
+    {
+        Name = bite;
+        File = bite.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 48000;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 562532;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1111529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = charging;
+        File = charging.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 417160;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3816431872;
+            Last Modified High = 30405193;
+        }
+    }
+
+    Wave
+    {
+        Name = footsteps;
+        File = footsteps.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 2105856;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 61464576;
+            Last Modified High = 30405194;
+        }
+    }
+
+    Wave
+    {
+        Name = gps_nearby;
+        File = gps_nearby.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 4055040;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 441464576;
+            Last Modified High = 30405194;
+        }
+    }
+
+    Wave
+    {
+        Name = gps_on;
+        File = gps_on.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 60876;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 681464576;
+            Last Modified High = 30405194;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_1;
+        File = groan_1.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 277920;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 751529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_2;
+        File = groan_2.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 227610;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1291529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_3;
+        File = groan_3.wav;
+        Build Settings Last Modified Low = 1704568597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 233128;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1511529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_4;
+        File = groan_4.wav;
+        Build Settings Last Modified Low = 1704724597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 227610;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1711529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_5;
+        File = groan_5.wav;
+        Build Settings Last Modified Low = 1704724597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 275890;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1871529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_6;
+        File = groan_6.wav;
+        Build Settings Last Modified Low = 1704724597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 48000;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 241920;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 2051529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_long;
+        File = groan_long.wav;
+        Build Settings Last Modified Low = 1704724597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 4566528;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 2511529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = groan_med;
+        File = groan_med.wav;
+        Build Settings Last Modified Low = 1704724597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 622592;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 2671529984;
+            Last Modified High = 30405196;
+        }
+    }
+
+    Wave
+    {
+        Name = suspense;
+        File = suspense.wav;
+        Build Settings Last Modified Low = 1704724597;
+        Build Settings Last Modified High = 30405215;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 2768972;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 951529984;
+            Last Modified High = 30405196;
+        }
+    }
+}
+
+</WaveBank>
+</Sections>

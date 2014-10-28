@@ -116,12 +116,14 @@
     <Compile Include="CollisionOffset.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="GpsSprite.cs" />
+    <Compile Include="LogSprite.cs" />
     <Compile Include="LostPlayer.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="OverlaySprite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="RockSprite.cs" />
     <Compile Include="Sprite.cs" />
     <Compile Include="SpriteManager.cs" />
     <Compile Include="SpriteSheet.cs" />

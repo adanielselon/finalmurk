@@ -16,7 +16,7 @@ namespace TheMurk
         protected SpriteEffects effects = SpriteEffects.None;
 
         protected GameState state;
-        protected CollisionOffset collisionOffset;
+        public CollisionOffset collisionOffset;
 
         int timeSinceLastFrame = 0;
 
@@ -81,10 +81,10 @@ namespace TheMurk
             get
             {
                 return new Rectangle(
-                    (int)position.X,
-                    (int)position.Y,
-                    (int) (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale),
-                    (int) (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale));
+                    (int) (position.X + collisionOffset.west),
+                    (int) (position.Y + collisionOffset.north),
+                    (int) ((spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) - (collisionOffset.east + collisionOffset.west)),
+                    (int) ((spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) - (collisionOffset.south + collisionOffset.north)));
             }
         }
     }

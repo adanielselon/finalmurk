@@ -30,6 +30,10 @@ namespace TheMurk
             spriteManager = new SpriteManager(this);
             Components.Add(spriteManager);
 
+            graphics.PreferredBackBufferHeight = 768;
+            graphics.PreferredBackBufferWidth = 1024;
+            graphics.ApplyChanges();
+
             base.Initialize();
         }
 
@@ -52,7 +56,6 @@ namespace TheMurk
             Terminal.CheckOpen(Keys.P, Keyboard.GetState());
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
             base.Update(gameTime);
         }
 

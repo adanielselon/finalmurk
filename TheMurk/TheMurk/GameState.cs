@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace TheMurk
 {
@@ -17,12 +19,48 @@ namespace TheMurk
         private int gameTime;
         private int losingTime;
 
-        public GameState()
+        public SoundBank bank;
+        public Cue[] cues = new Cue[3];
+
+
+        public GameState(SoundBank sBank)
         {
             isEast = false;
             isWest = false;
             isNorth = false;
             isSouth = false;
+            this.bank = sBank;
+
+            cues[0] = null;
+            cues[1] = null;
+            cues[2] = null;
+        }
+
+        public bool isCuePlaying(int i)
+        {
+            if (cues[i] == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public void playCue(String str, int i)
+        {
+            if (cues[i] == null)
+            {
+                cues[i] = bank.GetCue(str);
+                cues[i].Play();
+            }
+        }
+
+        public void stopCue(int i)
+        {
+            if (cues[i] != null)
+            {
+                cues[i].Stop(AudioStopOptions.Immediate);
+                cues[i] = null;
+            }
         }
 
         public bool getState(int direction)
@@ -83,6 +121,11 @@ namespace TheMurk
         public int getLosingTime()
         {
             return losingTime;
+        }
+
+        public void playCue(String cueName)
+        {
+            bank.PlayCue(cueName);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace TheMurk
              : base(new SpriteSheet(image, new  Point(0, 0), 1f), position, 
             new CollisionOffset(0, 0, 0, 0), SpriteManager.speed, state)
         {
-            Point frameSize = new Point(512, 512);
+            Point frameSize = new Point(1024, 1024);
             spriteSheet.addSegment(frameSize, new Point(0, 0), new Point(0, 0), 50);
             spriteSheet.setCurrentSegment(0);
             currentFrame = spriteSheet.currentSegment.startFrame;
