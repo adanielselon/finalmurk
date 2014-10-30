@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background.xnb</Output>
       <Time>2014-10-21T19:49:18.7086311-04:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\stump.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\stump.xnb</Output>
       <Time>2014-10-21T21:28:35.7325226-04:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\character.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\character.xnb</Output>
       <Time>2014-10-21T23:12:15.8460996-04:00</Time>
     </Item>
     <Item>
@@ -34,17 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background_2048.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background_2048.xnb</Output>
       <Time>2014-10-23T20:30:32.1639708-04:00</Time>
-    </Item>
-    <Item>
-      <Source>courier.spritefont</Source>
-      <Name>courier</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\courier.xnb</Output>
-      <Time>2014-10-23T01:10:13.8080001-04:00</Time>
     </Item>
     <Item>
       <Source>Images\PersonSpriteSheet.png</Source>
@@ -52,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\PersonSpriteSheet.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\PersonSpriteSheet.xnb</Output>
       <Time>2014-10-26T16:23:35.1262023-04:00</Time>
     </Item>
     <Item>
@@ -61,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\overlay.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\overlay.xnb</Output>
       <Time>2014-10-26T16:56:01.7703654-04:00</Time>
     </Item>
     <Item>
@@ -70,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\truestump.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\truestump.xnb</Output>
       <Time>2014-10-26T17:45:54.6655111-04:00</Time>
     </Item>
     <Item>
@@ -79,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\ZombieSpriteSheet.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\ZombieSpriteSheet.xnb</Output>
       <Time>2014-10-26T18:31:51.8899937-04:00</Time>
     </Item>
     <Item>
@@ -88,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery_game2.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery_game2.xnb</Output>
       <Time>2014-10-26T19:38:54.3570028-04:00</Time>
     </Item>
     <Item>
@@ -97,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\battery.xnb</Output>
       <Time>2014-10-26T20:32:02.6846251-04:00</Time>
     </Item>
     <Item>
@@ -106,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\gps_locator (1).xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\gps_locator (1).xnb</Output>
       <Time>2014-10-26T20:54:57.3258548-04:00</Time>
     </Item>
     <Item>
@@ -115,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\rockSpriteSheet.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\rockSpriteSheet.xnb</Output>
       <Time>2014-10-26T22:03:44.1821094-04:00</Time>
     </Item>
     <Item>
@@ -124,188 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\logSpriteSheet.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\logSpriteSheet.xnb</Output>
       <Time>2014-10-26T22:03:46.4761286-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\track1.wav</Source>
-      <Name>Audio\track1</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track1.xnb</Output>
-      <Time>2014-10-27T21:30:12-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\track2.wav</Source>
-      <Name>Audio\track2</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track2.xnb</Output>
-      <Time>2014-10-27T21:30:14-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\track3.wav</Source>
-      <Name>Audio\track3</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track3.xnb</Output>
-      <Time>2014-10-27T21:30:14-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\track4.wav</Source>
-      <Name>Audio\track4</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track4.xnb</Output>
-      <Time>2014-10-27T21:30:14-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\track5.wav</Source>
-      <Name>Audio\track5</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track5.xnb</Output>
-      <Time>2014-10-27T21:30:16-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\gps_nearby.wav</Source>
-      <Name>Audio\gps_nearby</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\gps_nearby.xnb</Output>
-      <Time>2014-10-27T20:57:10-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\gps_on.wav</Source>
-      <Name>Audio\gps_on</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\gps_on.xnb</Output>
-      <Time>2014-10-27T20:57:34-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_1.wav</Source>
-      <Name>Audio\groan_1</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_1.xnb</Output>
-      <Time>2014-10-27T21:12:00-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_2.wav</Source>
-      <Name>Audio\groan_2</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_2.xnb</Output>
-      <Time>2014-10-27T21:12:54-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_3.wav</Source>
-      <Name>Audio\groan_3</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_3.xnb</Output>
-      <Time>2014-10-27T21:13:16-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_4.wav</Source>
-      <Name>Audio\groan_4</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_4.xnb</Output>
-      <Time>2014-10-27T21:13:36-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_5.wav</Source>
-      <Name>Audio\groan_5</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_5.xnb</Output>
-      <Time>2014-10-27T21:13:52-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_6.wav</Source>
-      <Name>Audio\groan_6</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_6.xnb</Output>
-      <Time>2014-10-27T21:14:10-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_long.wav</Source>
-      <Name>Audio\groan_long</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_long.xnb</Output>
-      <Time>2014-10-27T21:14:56-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\groan_med.wav</Source>
-      <Name>Audio\groan_med</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_med.xnb</Output>
-      <Time>2014-10-27T21:15:12-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\suspense.wav</Source>
-      <Name>Audio\suspense</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\suspense.xnb</Output>
-      <Time>2014-10-27T21:12:20-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\battery_nearby.wav</Source>
-      <Name>Audio\battery_nearby</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\battery_nearby.xnb</Output>
-      <Time>2014-10-27T20:55:12-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\bite.wav</Source>
-      <Name>Audio\bite</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\bite.xnb</Output>
-      <Time>2014-10-27T21:12:36-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\charging.wav</Source>
-      <Name>Audio\charging</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\charging.xnb</Output>
-      <Time>2014-10-27T20:55:38-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\footsteps.wav</Source>
-      <Name>Audio\footsteps</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\footsteps.xnb</Output>
-      <Time>2014-10-27T20:56:32-04:00</Time>
     </Item>
     <Item>
       <Source>Images\trueoverlay.png</Source>
@@ -313,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\trueoverlay.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\trueoverlay.xnb</Output>
       <Time>2014-10-27T23:52:45.5308786-04:00</Time>
     </Item>
     <Item>
@@ -322,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\trulytheoverlay.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\trulytheoverlay.xnb</Output>
       <Time>2014-10-28T00:15:36.2552182-04:00</Time>
     </Item>
     <Item>
@@ -331,8 +142,224 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background_v2.xnb</Output>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\background_v2.xnb</Output>
       <Time>2014-10-28T03:44:51.5844212-04:00</Time>
+    </Item>
+    <Item>
+      <Source>courier.spritefont</Source>
+      <Name>courier</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\courier.xnb</Output>
+      <Time>2014-10-23T01:10:13.8080001-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\gps_nearby.wav</Source>
+      <Name>Audio\gps_nearby</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\gps_nearby.xnb</Output>
+      <Time>2014-10-27T20:57:10-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\gps_on.wav</Source>
+      <Name>Audio\gps_on</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\gps_on.xnb</Output>
+      <Time>2014-10-27T20:57:34-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_1.wav</Source>
+      <Name>Audio\groan_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_1.xnb</Output>
+      <Time>2014-10-27T21:12:00-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_2.wav</Source>
+      <Name>Audio\groan_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_2.xnb</Output>
+      <Time>2014-10-27T21:12:54-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_3.wav</Source>
+      <Name>Audio\groan_3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_3.xnb</Output>
+      <Time>2014-10-27T21:13:16-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_4.wav</Source>
+      <Name>Audio\groan_4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_4.xnb</Output>
+      <Time>2014-10-27T21:13:36-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_5.wav</Source>
+      <Name>Audio\groan_5</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_5.xnb</Output>
+      <Time>2014-10-27T21:13:52-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_6.wav</Source>
+      <Name>Audio\groan_6</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_6.xnb</Output>
+      <Time>2014-10-27T21:14:10-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_long.wav</Source>
+      <Name>Audio\groan_long</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_long.xnb</Output>
+      <Time>2014-10-27T21:14:56-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\groan_med.wav</Source>
+      <Name>Audio\groan_med</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\groan_med.xnb</Output>
+      <Time>2014-10-27T21:15:12-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\suspense.wav</Source>
+      <Name>Audio\suspense</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\suspense.xnb</Output>
+      <Time>2014-10-27T21:12:20-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\track1.wav</Source>
+      <Name>Audio\track1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track1.xnb</Output>
+      <Time>2014-10-27T21:30:12-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\track2.wav</Source>
+      <Name>Audio\track2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track2.xnb</Output>
+      <Time>2014-10-27T21:30:14-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\track3.wav</Source>
+      <Name>Audio\track3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track3.xnb</Output>
+      <Time>2014-10-27T21:30:14-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\track4.wav</Source>
+      <Name>Audio\track4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track4.xnb</Output>
+      <Time>2014-10-27T21:30:14-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\track5.wav</Source>
+      <Name>Audio\track5</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\track5.xnb</Output>
+      <Time>2014-10-27T21:30:16-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\battery_nearby.wav</Source>
+      <Name>Audio\battery_nearby</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\battery_nearby.xnb</Output>
+      <Time>2014-10-27T20:55:12-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\bite.wav</Source>
+      <Name>Audio\bite</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\bite.xnb</Output>
+      <Time>2014-10-27T21:12:36-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\charging.wav</Source>
+      <Name>Audio\charging</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\charging.xnb</Output>
+      <Time>2014-10-27T20:55:38-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\footsteps.wav</Source>
+      <Name>Audio\footsteps</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Audio\footsteps.xnb</Output>
+      <Time>2014-10-27T20:56:32-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\lose.png</Source>
+      <Name>Images\lose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\lose.xnb</Output>
+      <Time>2014-10-28T11:49:46.3721917-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\start.png</Source>
+      <Name>Images\start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\start.xnb</Output>
+      <Time>2014-10-28T11:49:46.3721917-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\win.png</Source>
+      <Name>Images\win</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\Images\win.xnb</Output>
+      <Time>2014-10-28T11:49:46.3821917-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -340,10 +367,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurkContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurkContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexander\Documents\FallSemester2014\GameProgramming\XNAProjects\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurkContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurkContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexander\Desktop\TheMurkUpdated\TheMurk\TheMurk\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

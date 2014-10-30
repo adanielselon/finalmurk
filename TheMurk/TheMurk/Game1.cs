@@ -18,11 +18,13 @@ namespace TheMurk
         SpriteBatch spriteBatch;
         SpriteManager spriteManager;
         SpriteFont font;
+        private bool gameStarted;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            gameStarted = false;
         }
 
         protected override void Initialize()
@@ -49,21 +51,103 @@ namespace TheMurk
 
         protected override void UnloadContent()
         {
+            spriteBatch = null;
         }
 
         protected override void Update(GameTime gameTime)
         {
-            Terminal.CheckOpen(Keys.P, Keyboard.GetState());
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-            base.Update(gameTime);
+           /* if (!gameStarted)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                {
+                    //UnloadContent();
+                    Initialize();
+                    LoadContent();
+                    gameStarted = true;
+                }
+            }*/
+            //else
+            {
+                Terminal.CheckOpen(Keys.P, Keyboard.GetState());
+                if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                    this.Exit();
+                if (spriteManager.gameOver || spriteManager.gameRunOutOfTime || spriteManager.gameWon)
+                {
+                    if (Keyboard.GetState().IsKeyDown(Keys.N))
+                    {
+                        this.Exit();
+                    }
+                    if (Keyboard.GetState().IsKeyDown(Keys.Y))
+                    {
+                        UnloadContent();
+                        Initialize();
+                        LoadContent();
+                    }
+                }
+                if (!gameStarted)
+                {
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    {
+                        UnloadContent();
+                        Initialize();
+                        LoadContent();
+                        gameStarted = true;
+                    }
+                }
+                base.Update(gameTime);
+            }
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            Terminal.CheckDraw(true);
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            base.Draw(gameTime);
+           /* if (!gameStarted)
+            {
+                //spriteManager.audioEngine = null;
+                GraphicsDevice.Clear(Color.AliceBlue);
+
+                spriteBatch.Begin();
+                spriteBatch.Draw(this.Content.Load<Texture2D>(@"Images/start"), new Vector2(0, 0), Color.AntiqueWhite);
+                spriteBatch.End();
+
+
+            }*/
+            
+            if (spriteManager.gameOver)
+            {
+                if (spriteManager.gameRunOutOfTime)
+                {
+                    GraphicsDevice.Clear(Color.Black);
+
+                    spriteBatch.Begin();
+                    spriteBatch.Draw(this.Content.Load<Texture2D>(@"Images/lose"), new Vector2(0, 0), Color.AntiqueWhite);
+                    spriteBatch.End();
+                }
+                else
+                {
+                    GraphicsDevice.Clear(Color.Black);
+
+                    spriteBatch.Begin();
+                    spriteBatch.Draw(this.Content.Load<Texture2D>(@"Images/lose"), new Vector2(0, 0), Color.AntiqueWhite);
+                    spriteBatch.End();
+                }
+            }
+            else if (spriteManager.gameRunOutOfTime)
+            {
+                GraphicsDevice.Clear(Color.Black);
+            }
+            else if (spriteManager.gameWon)
+            {
+                GraphicsDevice.Clear(Color.AliceBlue);
+                spriteBatch.Begin();
+                spriteBatch.Draw(this.Content.Load<Texture2D>(@"Images/win"), new Vector2(0, 0), Color.AntiqueWhite);
+                spriteBatch.End();
+            }
+            else
+            {
+                Terminal.CheckDraw(true);
+                GraphicsDevice.Clear(Color.Black);
+                base.Draw(gameTime);
+            }
 
             
         }

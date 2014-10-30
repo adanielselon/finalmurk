@@ -15,6 +15,7 @@ namespace TheMurk
         public SoundBank bank;
         public Cue sound;
 
+        private int isConfused;
         protected Vector2 previousPosition;
         protected bool chasing;
 
@@ -23,6 +24,7 @@ namespace TheMurk
         {
             this.bank = bank;
             this.sound = null;
+            this.isConfused = 0;
 
             Point frameSize = new Point(208, 202);
 
@@ -47,26 +49,57 @@ namespace TheMurk
             
             if (position.X + spriteSheet.currentSegment.frameSize.X > 0 && position.Y + spriteSheet.currentSegment.frameSize.Y > 0 && position.X < clientBounds.Width && position.Y < clientBounds.Height)
             {
-                if (Math.Abs(player.position.X - position.X) > 1)
+                if (isConfused <= 0)
                 {
-                    if (player.position.X > position.X)
+                    if (Math.Abs(player.position.X - position.X) > 1)
                     {
-                        position.X += 1;
+                        if (player.position.X > position.X)
+                        {
+                            position.X += 1;
+                        }
+                        else
+                        {
+                            position.X -= 1;
+                        }
                     }
-                    else
+                    if (Math.Abs(player.position.Y - position.Y) > 1)
                     {
-                        position.X -= 1;
+                        if (player.position.Y > position.Y)
+                        {
+                            position.Y += 1;
+                        }
+                        else
+                        {
+                            position.Y -= 1;
+                        }
                     }
                 }
-                if (Math.Abs(player.position.Y - position.Y) > 1)
+                else
                 {
-                    if (player.position.Y > position.Y)
+                    Random random = new Random();
+                    if (Math.Abs(player.position.X - position.X) > 1)
                     {
-                        position.Y += 1;
+                        int a = random.Next(-5, 5);
+                        if (a >= 0)
+                        {
+                            position.X -= 1;
+                        }
+                        else
+                        {
+                            position.X += 1;
+                        }
                     }
-                    else
+                    if (Math.Abs(player.position.Y - position.Y) > 1)
                     {
-                        position.Y -= 1;
+                        int a = random.Next(-5, 5);
+                        if (a < 0)
+                        {
+                            position.Y += 1;
+                        }
+                        else
+                        {
+                            position.Y -= 1;
+                        }
                     }
                 }
             }
@@ -111,28 +144,50 @@ namespace TheMurk
                 spriteSheet.setCurrentSegment(3);
             }
 
-            currentFrame = spriteSheet.currentSegment.startFrame;
+            isConfused--;
+            if(isConfused <= 0)
+                currentFrame = spriteSheet.currentSegment.startFrame;
           
         }
 
         public void collision(Sprite sprite)
         {
-            if (position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) - collisionOffset.east <= sprite.position.X + (SpriteManager.speed.X + 6) + sprite.collisionOffset.west && position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) - collisionOffset.east > sprite.position.X + sprite.collisionOffset.west)
+            int howMany = 0;
+            int modifier;
+
+            if (sprite is ZombieSprite)
+            {
+                modifier = 25;
+            }
+            else
+            {
+                modifier = 0;
+            }
+
+            if (position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) - collisionOffset.east <= sprite.position.X + (SpriteManager.speed.X + modifier) + sprite.collisionOffset.west && position.X + (spriteSheet.currentSegment.frameSize.X * spriteSheet.scale) - collisionOffset.east > sprite.position.X + sprite.collisionOffset.west)
             {
                 position.X = sprite.position.X + sprite.collisionOffset.west - spriteSheet.currentSegment.frameSize.X * spriteSheet.scale + collisionOffset.east;
+                howMany++;
             }
-            else if (position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) - collisionOffset.south <= sprite.position.Y + (SpriteManager.speed.Y + 6) + sprite.collisionOffset.north && position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) - collisionOffset.south > sprite.position.Y + sprite.collisionOffset.north)
+            if (position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) - collisionOffset.south <= sprite.position.Y + (SpriteManager.speed.Y + modifier) + sprite.collisionOffset.north && position.Y + (spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale) - collisionOffset.south > sprite.position.Y + sprite.collisionOffset.north)
             {
                 position.Y = sprite.position.Y + sprite.collisionOffset.north - spriteSheet.currentSegment.frameSize.Y * spriteSheet.scale + collisionOffset.south;
+                howMany++;
             }
-            else if (position.X + collisionOffset.west < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - sprite.collisionOffset.east && position.X + collisionOffset.west >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - (SpriteManager.speed.X + 6) - sprite.collisionOffset.east)
+            if (position.X + collisionOffset.west < sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - sprite.collisionOffset.east && position.X + collisionOffset.west >= sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - (SpriteManager.speed.X + modifier) - sprite.collisionOffset.east)
             {
                 position.X = sprite.position.X + (sprite.spriteSheet.currentSegment.frameSize.X * sprite.spriteSheet.scale) - sprite.collisionOffset.east - collisionOffset.west;
+                howMany++;
             }
-            else if (position.Y + collisionOffset.north < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - sprite.collisionOffset.south && position.Y + collisionOffset.north >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - (SpriteManager.speed.Y + 6) - sprite.collisionOffset.south)
+            if (position.Y + collisionOffset.north < sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - sprite.collisionOffset.south && position.Y + collisionOffset.north >= sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - (SpriteManager.speed.Y + modifier) - sprite.collisionOffset.south)
             {
                 position.Y = sprite.position.Y + (sprite.spriteSheet.currentSegment.frameSize.Y * sprite.spriteSheet.scale) - sprite.collisionOffset.south - collisionOffset.north;
-            }           
+                howMany++;
+            }
+            if (howMany > 1)
+            {
+                isConfused = 5; 
+            }
         }
 
         public bool isCuePlaying()

@@ -20,19 +20,23 @@ namespace TheMurk
         Cue trackCue;
 
         //GAMEPLAY VARIABLES
-        private int objectsCount = 200;
+        private int objectsCount = 500;
         private int zombieCount = 30;
         private int batteryCount = 10;
         public readonly static Point frameSize = new Point(1024, 1024);
         public readonly static Point playerSize = new Point(66, 66);
-        public readonly static int mapSize = 2;//even numbers only
+        public readonly static int mapSize = 4;//even numbers only
         public readonly static Vector2 speed = new Vector2(3, 3);
 
         private int currentTime = 0;
 
         protected bool collision = false;
-        private int losingTime = 500000;
+        private int losingTime = 60000;
         private int batteryBonus = 10000;
+
+        public bool gameOver;
+        public bool gameWon;
+        public bool gameRunOutOfTime;
 
         GameState state;
         Game game;
@@ -56,7 +60,9 @@ namespace TheMurk
             : base(game)
         {
             this.game = game;
-            
+            gameOver = false;
+            gameWon = false;
+            gameRunOutOfTime = false;
             
         }
 
@@ -119,10 +125,22 @@ namespace TheMurk
 
             base.LoadContent();
         }
+/*
+        protected override void UnloadContent()
+        {
+            objects.Clear();
+            batteries.Clear();
+            backgrounds.Clear();
+            zombies.Clear();
+            gps = null;
+            player = null;
 
+            base.UnloadContent();
+        }
+*/
         public override void Update(GameTime gameTime)
         {
-
+            
             // call update on all map objects (backgrounds, map objects, batteries, gps, and zombies)
             map.update(gameTime, Game.Window.ClientBounds);
 
@@ -160,8 +178,42 @@ namespace TheMurk
                     if (zombie1.collisionRect.Intersects(zombie2.collisionRect))
                         zombie2.collision(zombie1);
                 }
+
+                if (zombie1.collisionRect.Intersects(player.collisionRect))
+                {
+                    soundBank.GetCue("bite").Play();
+                    if (gameWon == false)
+                    {
+                        gameOver = true;
+                    }
+                    zombie1.position.X = 10000;
+                    zombie1.position.Y = 10000;
+                }
+
+                //if zombie is on screen make zombie noise
+                if (zombie1.collisionRect.Intersects(new Rectangle(0, 0, Game.Window.ClientBounds.Width, Game.Window.ClientBounds.Height)) && !zombie1.isCuePlaying())
+                {
+                    zombie1.playCue();
+                }
+                if (!zombie1.collisionRect.Intersects(new Rectangle(0, 0, Game.Window.ClientBounds.Width, Game.Window.ClientBounds.Height)))
+                {
+                    zombie1.stopCue();
+                }
             }
 
+
+            //check again if any map objects intersect with player and zombies
+            foreach (MapBoundSprite sprite in objects)
+            {
+                if (sprite.collisionRect.Intersects(player.collisionRect))
+                    player.collision(sprite);
+                foreach (ZombieSprite zombie in zombies)
+                {
+                    if (sprite.collisionRect.Intersects(zombie.collisionRect))
+                        zombie.collision(sprite);
+                }
+            }
+            /*
             //check for zombie - player collision. Game end.
             foreach (ZombieSprite zombie in zombies)
             {
@@ -171,7 +223,7 @@ namespace TheMurk
                     game.Exit();
                 }
 
-                //if zombie is on screen make battery noise
+                //if zombie is on screen make zombie noise
                 if (zombie.collisionRect.Intersects(new Rectangle(0, 0, Game.Window.ClientBounds.Width, Game.Window.ClientBounds.Height)) && !zombie.isCuePlaying())
                 {
                     zombie.playCue();
@@ -180,7 +232,7 @@ namespace TheMurk
                 {
                     zombie.stopCue();
                 }
-            }
+            }*/
 
             //check for battery - player collision. Add time.
             foreach (BatterySprite battery in batteries)
@@ -207,7 +259,12 @@ namespace TheMurk
             if (gps.collisionRect.Intersects(player.collisionRect))
             {
                 soundBank.GetCue("gps_on").Play();
-                game.Exit();
+                if (gameOver == false)
+                {
+                    gameWon = true;
+                }
+                gps.position.X = 10000;
+                gps.position.Y = 10000;
             }
 
             //if gps is on screen make gps noise
@@ -215,23 +272,31 @@ namespace TheMurk
             {
                 state.playCue("gps_nearby", 1);
             }
-            if(!gps.collisionRect.Intersects(new Rectangle(0, 0, Game.Window.ClientBounds.Width, Game.Window.ClientBounds.Height))) 
+            if(!gps.collisionRect.Intersects(new Rectangle(0, 0, Game.Window.ClientBounds.Width, Game.Window.ClientBounds.Height)) || gameWon) 
             {
                 state.stopCue(1);
             }
 
             if (state.getGameTime() >= state.getLosingTime() - 15000)
             {
-                if (!suspenseCue.IsPlaying)
+                if (!gameWon && !gameRunOutOfTime && !gameOver)
                 {
-                    suspenseCue.Play();
+                    if (!suspenseCue.IsPlaying)
+                    {
+                        suspenseCue.Play();
+                    }
                 }
             }
 
 
             state.setGameTime(state.getGameTime() + gameTime.ElapsedGameTime.Milliseconds);
             if (state.getGameTime() >= state.getLosingTime())
-                game.Exit();
+            {
+                if (gameOver == false && gameWon == false)
+                {
+                    gameRunOutOfTime = true;
+                }
+            }
 
             //update overlays
             batteryOverlay.Update(gameTime, Game.Window.ClientBounds);
@@ -257,7 +322,7 @@ namespace TheMurk
             }
             gps.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
-            //overlay.Draw(gameTime, spriteBatch);
+            overlay.Draw(gameTime, spriteBatch);
             batteryOverlay.Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
